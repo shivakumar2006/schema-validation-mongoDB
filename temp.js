@@ -28,7 +28,7 @@ db.createCollection("nonFiction", {
                     description: "must be a string and required",
                 },
                 price: {
-                    bsonTyoe: "number",
+                    bsonType: "number",
                     description: "mudt be a number and required",
                 }
                 }
