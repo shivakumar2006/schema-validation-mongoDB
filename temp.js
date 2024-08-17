@@ -21,7 +21,7 @@
 db.createCollection("nonFiction", {
     validator: {
         $jsonSchema: {
-            required: ["name", "price"],
+            required: ["name", "price", "author"],
                 properties: {
                 name: {
                     bsonType: "string",
@@ -29,8 +29,12 @@ db.createCollection("nonFiction", {
                 },
                 price: {
                     bsonType: "number",
-                    description: "mudt be a number and required",
-                }
+                    description: "must be a number and required",
+                },
+                author: {
+                    bsonType: "array",
+                    description: "must be a array and required",
+                },
                 }
         }
     },
